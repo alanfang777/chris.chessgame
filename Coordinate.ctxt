@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Coordinate()
+comment1.params=chess
+comment1.target=Coordinate(Chess)
+comment2.params=
+comment2.target=Chess\ getChess()
+comment3.params=chess
+comment3.target=void\ setChess(Chess)
+numComments=4
