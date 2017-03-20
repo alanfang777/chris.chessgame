@@ -1,41 +1,34 @@
-
+ 
 /**
  * Write a description of class Bishop here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bishop extends Chess
+public class Bishop extends Piece
 {
-    Side side;
     Bishop(Side side){
-        this.side = side;
+        super(side);
     }
     public String toString()
     {
-        if(side==null){
-        }else{
-            if(side.getSide().equals("Black")||side.getSide().equals("black"))
-            {
-                return "[BBp]";
-            }else if(side.getSide().equals("White")||side.getSide().equals("white")){
-                return "[WBp]";
-            }
+        if(isBlack())
+        {
+            return "[BBp]";
+        }else if(isWhite()){
+            return "[WBp]";
         }
+        
         return null;
     }
-    public boolean behavior(int origin, int destination){
-        int x1=origin%8;
-        int x2=destination%8;
-        int y1=origin/8;
-        int y2=destination/8;
-        if(Math.abs(x1-x2)==Math.abs(y1-y2)){
+    public boolean isAllowed(int x1,int x2,int y1,int y2){
+        if(validateMovement(x1,x2,y1,y2)){
             return true;
         }
         return false;
     }
-     public String getSide()
+    public boolean validateMovement(int x1,int x2,int y1,int y2)
     {
-        return side.getSide();
+        return Math.abs(x1-x2)==Math.abs(y1-y2);
     }
 }

@@ -5,33 +5,25 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Rook extends Chess
+public class Rook extends Piece
 {
-    Side side;
     Rook(Side side){
-        this.side = side;
+        super(side);
     }
     public String toString()
     {
-        if(side==null){
-        }else{
-            if(side.getSide().equals("Black")||side.getSide().equals("black"))
-            {
-                return "[BRk]";
-            }else if(side.getSide().equals("White")||side.getSide().equals("white")){
-                return "[WRk]";
-            }
+        if(isBlack())
+        {
+           return "[BRk]";
+        }else if(isWhite()){
+           return "[WRk]";
         }
         return null;
     }
-    public boolean behavior(int origin ,int destination){
-        if(origin%8==destination%8||origin/8==destination/8){
+    public boolean isAllowed(int x1,int x2,int y1,int y2){
+        if(x1==x2||y1==y2){
             return true;
         }
         return false;
-    }
-     public String getSide()
-    {
-        return side.getSide();
     }
 }

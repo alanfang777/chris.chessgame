@@ -5,40 +5,28 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class King extends Chess
+public class King extends Piece
 {
-    Side side;
     King(Side side){
-        this.side = side;
+        super(side);
     }
     public String toString()
     {
-        if(side==null){
-        }else{
-            if(side.getSide().equals("Black")||side.getSide().equals("black"))
-            {
+        if(isBlack())
+        {
                 return "[BKg]";
-            }else if(side.getSide().equals("White")||side.getSide().equals("white")){
+        }else if(isWhite()){
                 return "[WKg]";
-            }
-        }
+        }   
         return null;
     }
-    public boolean behavior(int origin, int destination){
-        int x1=origin%8;
-        int x2=destination%8;
-        int y1=origin/8;
-        int y2=destination/8;
-        if(Math.abs(x1-x2)==1&&y1==y2||Math.abs(y1-y2)==1&&x1==x2){
+    public boolean isAllowed(int x1,int x2,int y1,int y2){
+        if(Math.abs(x1-x2)==1||Math.abs(y1-y2)==1){
             return true;
-        }else if(Math.abs(x1-x2)==Math.abs(y1-y2)&&Math.abs(x1-x2)==1){
+        }else if(Math.abs(y1-y2)==1&&Math.abs(x1-x2)==1){
             return true;
         }
         return false;
-    }
-     public String getSide()
-    {
-        return side.getSide();
     }
     
 }

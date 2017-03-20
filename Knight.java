@@ -5,39 +5,35 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Knight extends Chess
+public class Knight extends Piece
 {
-    Side side;
     Knight(Side side){
-        this.side = side;
+        super(side);
     }
     public String toString()
     {
-        if(side==null){
-        }else{
-            if(side.getSide().equals("Black")||side.getSide().equals("black"))
-            {
-                return "[BKt]";
-            }else if(side.getSide().equals("White")||side.getSide().equals("white")){
-                return "[WKt]";
-            }
-        }
+        if(isBlack())
+        {
+           return "[BKt]";
+        }else if(isWhite()){
+           return "[WKt]";
+        }  
         return null;
     }
-    public boolean behavior(int origin,int destination){
-        int x1=origin%8;
-        int x2=destination%8;
-        int y1=origin/8;
-        int y2=destination/8;
-        if(Math.abs(x1-x2)==2&&Math.abs(y1-y2)==1){
+    public boolean isAllowed(int x1,int x2,int y1,int y2){
+        if(validateForwardMovement(x1,x2,y1,y2)){
             return true;
-        }else if((Math.abs(x1-x2)==1||Math.abs(y2-y1)==2)){
+        }else if(validateHorizontalMovement(x1,x2,y1,y2)){
             return true;
         }
         return false;
     }
-    public String getSide()
+    private boolean validateForwardMovement(int x1,int x2,int y1,int y2)
     {
-        return side.getSide();
+        return (Math.abs(x1-x2)==2&&Math.abs(y1-y2)==1);
+    }
+    public boolean validateHorizontalMovement(int x1,int x2,int y1,int y2)
+    {
+        return (Math.abs(y1-y2)==2&&Math.abs(y1-y2)==1);
     }
 }

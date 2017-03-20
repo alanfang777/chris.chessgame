@@ -7,7 +7,7 @@
  */
 public class Side
 {
-    public final String side;
+    private final String side ;
     Side(String side){
         this.side=side;
     }

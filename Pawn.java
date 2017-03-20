@@ -5,52 +5,53 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Pawn extends Chess
+public class Pawn extends Piece
 {
-    Side side;
+    boolean isFirstStep=true;
     Pawn(Side side){
-        this.side = side;
+        super(side);
     }
     public String toString()
     {
-        if(side==null){
-        }else{
-            if(side.getSide().equals("Black")||side.getSide().equals("black"))
-            {
-                return "[BPn]";
-            }else if(side.getSide().equals("White")||side.getSide().equals("white")){
-                return "[WPn]";
-            }
-        }
+        if(isBlack())
+        {
+             return "[BPn]";
+        }else if(isWhite()){
+             return "[WPn]";
+        } 
         return null;
     }
-    public boolean behavior(int origin,int destination){
-        //unfinished fragment: the tilt movement of the pawn
-        if(side.getSide()=="white"){
-            if(origin/8<=4){
-                if(destination/8>=origin/8-2){
-                    return true;
-                }else{
-                    if(destination/8>=origin/8-1){
-                        return true;
-                    }
-                }
-            }
-        }else{
-            if(origin/8>=5){
-                if(destination/8<=origin/8-2){
-                    return true;
-                }else{
-                    if(destination/8<=origin/8-1){
-                        return true;
-                    }
-                }
+    public boolean isAllowed( int x1,int x2,int y1,int y2){
+        if(isFirstStep)
+        {
+            if(validateFirstMovement(x1,x2,y1,y2))
+            {
+                return true;
             }
         }
-        return false;
+        else if(validateMovement(x1,x2,y1,y2))
+        {
+            return true;
+        }
+       else if(isThereEnemy(x2,y2))
+       {
+           if(validateEenemyTerminatingMovement(x1,x2,y1,y2))
+           {
+               return true;
+           }
+       }
+       return false;
     }
-     public String getSide()
+    private boolean validateFirstMovement(int x1,int x2,int y1,int y2)
     {
-        return side.getSide();
+        return (Math.abs(x1-x2)==0 && (Math.abs(y1-y2)==2 || Math.abs(y1-y2)==1));
+    }
+    private boolean validateMovement(int x1,int x2,int y1,int y2)
+    {
+        return (Math.abs(x1-x2)==0 && Math.abs(y2-y1)==1);
+    }
+    private boolean validateEenemyTerminatingMovement(int x1,int x2,int y1,int y2)
+    {
+        return (Math.abs(y2-y1)==1 && Math.abs(x2-x1)==1);
     }
 }
