@@ -21,9 +21,14 @@ public class Rook extends Piece
         return null;
     }
     public boolean isAllowed(int x1,int x2,int y1,int y2){
-        if(x1==x2||y1==y2){
+        if(validateMovement(x1,x2,y1,y2)){
             return true;
         }
         return false;
     }
+    public boolean validateMovement(int x1,int x2,int y1,int y2)
+    {
+        return x1==x2&&y1==y2;
+    }
 }
+

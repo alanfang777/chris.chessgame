@@ -28,5 +28,8 @@ public class King extends Piece
         }
         return false;
     }
-    
+    public boolean validateDiagonalMovement(int x1,int x2,int y1,int y2)
+    {
+        return Math.abs(y1-y2)==1&&Math.abs(x1-x2)==1;
+    }
 }

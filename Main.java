@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
@@ -10,15 +9,18 @@ import java.util.ArrayList;
 //main
 public class Main
 {
+   /*
      ChessBoard chessboard=new ChessBoard();
      static int x1=0;
      static int x2=0;
      static int y1=0;
      static int y2=0;
+     */
      Main(){
         chessboard = new ChessBoard();
      }
      public static void main(){
+         /*
          Scanner in = new Scanner(System.in);
          boolean works = true;
           System.out.println("Welcome to alan.chessgame v1.0.0");
@@ -88,4 +90,10 @@ public class Main
          public static int convertion(int x, int y ) {
          return x+y*8;
      }
+     */
+     ConsoleManager.console();
+
+    
+    
+   }
 }

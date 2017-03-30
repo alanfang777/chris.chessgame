@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class ChessBoard here.
  * 
@@ -16,8 +15,8 @@ public class ChessBoard
         coordinate2D = new Coordinate2D();
         visualize.print(coordinate2D.getStorechess());
     } 
-    public void PrintCoordinate(int x,int y){
-        coordinate2D.movement(x,y);
+    public void PrintCoordinate(int x1,int y1,int x2,int y2){
+        coordinate2D.movement(x1,y1,x2,y2);
         visualize.print(coordinate2D.getStorechess());
     }
 }
