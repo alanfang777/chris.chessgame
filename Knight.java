@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Knight here.
  * 
@@ -7,33 +7,35 @@
  */
 public class Knight extends Piece
 {
-    Knight(Side side){
-        super(side);
+    Knight(Side side,Piece[][] coordinate){
+        super(side,coordinate);
     }
     public String toString()
     {
-        if(isBlack())
-        {
-           return "[BKt]";
+        if(isBlack()){
+            return "[BKt]";
         }else if(isWhite()){
-           return "[WKt]";
-        }  
+            return "[WKt]";
+        }
         return null;
     }
     public boolean isAllowed(int x1,int x2,int y1,int y2){
-        if(validateForwardMovement(x1,x2,y1,y2)){
-            return true;
-        }else if(validateHorizontalMovement(x1,x2,y1,y2)){
+        if(isSlantMovementValid(x1,x2,y1,y2)){
             return true;
         }
         return false;
     }
-    private boolean validateForwardMovement(int x1,int x2,int y1,int y2)
-    {
-        return (Math.abs(x1-x2)==2&&Math.abs(y1-y2)==1);
+    private boolean isSlantMovementValid(int x1,int x2,int y1,int y2){
+        return (Math.abs(x1-x2)==2&&Math.abs(y1-y2)==1) || (Math.abs(y1-y2)==2&&Math.abs(x1-x2)==1);
     }
-    public boolean validateHorizontalMovement(int x1,int x2,int y1,int y2)
-    {
-        return (Math.abs(y1-y2)==2&&Math.abs(y1-y2)==1);
+    public void addingEatablePiece(int x1,int y1,ArrayList eatablePiece){
+        eatablePiece.add(isPieceInBetween_2(x1,x1+3,y1,y1+2));
+        eatablePiece.add(isPieceInBetween_2(x1,x1-3,y1,y1-2));
+        eatablePiece.add(isPieceInBetween_2(x1,x1+3,y1,y1-2));
+        eatablePiece.add(isPieceInBetween_2(x1,x1-3,y1,y1+2));
+        eatablePiece.add(isPieceInBetween_2(x1,x1+2,y1,y1-3));
+        eatablePiece.add(isPieceInBetween_2(x1,x1-2,y1,y1+3));
+        eatablePiece.add(isPieceInBetween_2(x1,x1+2,y1,y1+3));
+        eatablePiece.add(isPieceInBetween_2(x1,x1-2,y1,y1-3));
     }
 }

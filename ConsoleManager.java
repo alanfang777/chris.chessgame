@@ -9,7 +9,7 @@ public class ConsoleManager
 {
     public static void console()
     {
-        ChessBoard chessBoard=new chessBoard();
+        ChessBoard chessBoard=new ChessBoard();
         Scanner in=new Scanner(System.in);
         String name1;
         String name2;
@@ -22,10 +22,10 @@ public class ConsoleManager
         name2=in.nextLine();
         while(keepGaming)
         {
-            int x1;
-            int x2;
-            int y1;
-            int y2;
+            int x1=0;
+            int x2=0;
+            int y1=0;
+            int y2=0;
             if(sequence==0)
             {
                  System.out.println("This is "+name1+"'s turn");

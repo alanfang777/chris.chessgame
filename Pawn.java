@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Pawn here.
  * 
@@ -7,51 +7,35 @@
  */
 public class Pawn extends Piece
 {
-    boolean isFirstStep=true;
-    Pawn(Side side){
-        super(side);
+    Pawn(Side side,Piece[][] piece){
+        super(side,piece);
     }
     public String toString()
     {
-        if(isBlack())
-        {
-             return "[BPn]";
-        }else if(isWhite()){
-             return "[WPn]";
-        } 
+        if(super.getSide()==null){
+        }else{
+            if(super.getSide().getSide().equals("Black")||super.getSide().getSide().equals("black"))
+            {
+                return "[BPn]";
+            }else if(super.getSide().getSide().equals("White")||super.getSide().getSide().equals("white")){
+                return "[WPn]";
+            }
+        }
         return null;
     }
     public boolean isAllowed( int x1,int x2,int y1,int y2){
-        if(isFirstStep)
-        {
-            if(validateFirstMovement(x1,x2,y1,y2))
-            {
-                return true;
-            }
-        }
-        else if(validateMovement(x1,x2,y1,y2))
-        {
+        // you can use super.getCoordinate to get the Coordinate();
+        // Only pawn can use it by calling getCoordinate();
+        // example
+        // 别忘了写Pawn变身的功能;
+        /*Visualize visualize = new Visualize();
+        visualize.print(super.getCoordinate());
+        if(super.isPieceInBetween(x1,x2,y1,y2)==null){
             return true;
-        }
-       else if(isThereEnemy(x2,y2))
-       {
-           if(validateEenemyTerminatingMovement(x1,x2,y1,y2))
-           {
-               return true;
-           }
-       }
-       return false;
+        }*/
+        return true;
     }
-    private boolean validateFirstMovement(int x1,int x2,int y1,int y2)
-    {
-        return (Math.abs(x1-x2)==0 && (Math.abs(y1-y2)==2 || Math.abs(y1-y2)==1));
-    }
-    private boolean validateMovement(int x1,int x2,int y1,int y2)
-    {
-        return (Math.abs(x1-x2)==0 && Math.abs(y2-y1)==1);
-    }
-    private boolean validateEenemyTerminatingMovement(int x1,int x2,int y1,int y2)
-    {
-        return (Math.abs(y2-y1)==1 && Math.abs(x2-x1)==1);
+    public void addingEatablePiece(int x1,int y1,ArrayList eatablePiece){
+        
     }
 }

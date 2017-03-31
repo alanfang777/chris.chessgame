@@ -1,14 +1,10 @@
 #BlueJ class context
-comment0.params=side
-comment0.target=Pawn(Side)
+comment0.params=side\ piece
+comment0.target=Pawn(Side,\ Piece[][])
 comment1.params=
 comment1.target=java.lang.String\ toString()
 comment2.params=x1\ x2\ y1\ y2
 comment2.target=boolean\ isAllowed(int,\ int,\ int,\ int)
-comment3.params=x1\ x2\ y1\ y2
-comment3.target=boolean\ validateFirstMovement(int,\ int,\ int,\ int)
-comment4.params=x1\ x2\ y1\ y2
-comment4.target=boolean\ validateMovement(int,\ int,\ int,\ int)
-comment5.params=x1\ x2\ y1\ y2
-comment5.target=boolean\ validateEenemyTerminatingMovement(int,\ int,\ int,\ int)
-numComments=6
+comment3.params=x1\ y1\ eatablePiece
+comment3.target=void\ addingEatablePiece(int,\ int,\ java.util.ArrayList)
+numComments=4

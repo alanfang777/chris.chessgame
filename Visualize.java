@@ -7,16 +7,21 @@ import java.util.*;
  */
 public class Visualize
 {
-    public void print(Coordinate[][] arr){
-        for(int y=0;y<8;y++){
-            for(int x=0;x<8;x++){
-                if(arr[y][x]==null){
-                    System.out.print("[   ]");
-                }else{
-                    System.out.print(arr[y][x].getChess().toString());
-                }
+    public void print(Piece[][] arr){
+            int y=0;
+            while(y<=7){
+                horizontalPrintPiece(arr,y);
+                y++;
             }
-            System.out.println();
-        }
+    }
+    private void horizontalPrintPiece(Piece[][] arr,int y){
+        for(int x=0;x<8;x++){
+            if(arr[y][x]==null){
+                System.out.print("[   ]");
+            }else{
+                System.out.print(arr[y][x].toString());
+            }
+            }
+        System.out.println();
     }
 }

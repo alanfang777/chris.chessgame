@@ -7,25 +7,27 @@
  */
 public class PlayerInput
 {
-    private static int maxPlayerNumber;
-    private Player player1;
-    private Player player2;
-    public PlayerInput(Player player1,Player player2)
+    // instance variables - replace the example below with your own
+    private int x;
+
+    /**
+     * Constructor for objects of class PlayerInput
+     */
+    public PlayerInput()
     {
-        this.player1=player1;
-        this.player2=player2;
-        maxPlayerNumber++;     
+        // initialise instance variables
+        x = 0;
     }
-    public void setName(String name1,String name2)
+
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public int sampleMethod(int y)
     {
-        player1.setName(name1);
-        player2.setName(name2);
-    }
-    public void getPlayerName(int playerNumber)
-    {
-        if(playerNumber==1)
-            player1.getName();
-        else if(playerNumber==2)
-            player2.getName();
+        // put your code here
+        return x + y;
     }
 }

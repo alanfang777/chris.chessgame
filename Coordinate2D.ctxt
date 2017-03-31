@@ -2,9 +2,7 @@
 comment0.params=
 comment0.target=Coordinate2D()
 comment1.params=
-comment1.target=Coordinate[][]\ getStorechess()
-comment2.params=x\ y
-comment2.target=Coordinate\ getCoordinate(int,\ int)
-comment3.params=origin\ destination
-comment3.target=void\ movement(int,\ int)
-numComments=4
+comment1.target=Piece[][]\ getPieceArray()
+comment2.params=x1\ x2\ y1\ y2
+comment2.target=boolean\ movePiece(int,\ int,\ int,\ int)
+numComments=3

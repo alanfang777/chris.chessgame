@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=
 comment0.target=ChessBoard()
-comment1.params=x\ y
-comment1.target=void\ PrintCoordinate(int,\ int)
+comment1.params=x1\ x2\ y1\ y2
+comment1.target=void\ printCoordinate(int,\ int,\ int,\ int)
 numComments=2
