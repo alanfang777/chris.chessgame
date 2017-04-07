@@ -1,4 +1,5 @@
-
+import java.util.*;
+import Exceptions.*;
 /**
  * Write a description of class Pawn here.
  * 
@@ -7,51 +8,50 @@
  */
 public class Pawn extends Piece
 {
-    boolean isFirstStep=true;
-    Pawn(Side side){
-        super(side);
+    Pawn(Side side,Piece[][] piece,ArrayList threateningPiece){
+        super(side,piece,threateningPiece);
     }
     public String toString()
     {
-        if(isBlack())
-        {
-             return "[BPn]";
-        }else if(isWhite()){
-             return "[WPn]";
-        } 
-        return null;
-    }
-    public boolean isAllowed( int x1,int x2,int y1,int y2){
-        if(isFirstStep)
-        {
-            if(validateFirstMovement(x1,x2,y1,y2))
+        if(super.getSide()==null){
+        }else{
+            if(isBlack())
             {
-                return true;
+                return "[BPn]";
+            }else if(isWhite()){
+                return "[WPn]";
             }
         }
-        else if(validateMovement(x1,x2,y1,y2))
-        {
-            return true;
+        return null;
+    }
+    public boolean isAllowed( int x1,int x2,int y1,int y2) throws InvalidMoveException{
+        if(isBlack()){
+            if(y1==y2-1){
+                return true;
+            }else if(y1==y2-2 && y1==1){
+                return true;
+            }
+            return false;
+        }else if(isWhite()){
+            if(y1==y1+1){
+                return true;
+            }else if(y1==y2+2 && y1==6){
+                return true;
+            }
+            return false;
         }
-       else if(isThereEnemy(x2,y2))
-       {
-           if(validateEenemyTerminatingMovement(x1,x2,y1,y2))
-           {
-               return true;
-           }
-       }
-       return false;
+        else{
+            throw new InvalidMoveException();
+        }
+       
     }
-    private boolean validateFirstMovement(int x1,int x2,int y1,int y2)
-    {
-        return (Math.abs(x1-x2)==0 && (Math.abs(y1-y2)==2 || Math.abs(y1-y2)==1));
-    }
-    private boolean validateMovement(int x1,int x2,int y1,int y2)
-    {
-        return (Math.abs(x1-x2)==0 && Math.abs(y2-y1)==1);
-    }
-    private boolean validateEenemyTerminatingMovement(int x1,int x2,int y1,int y2)
-    {
-        return (Math.abs(y2-y1)==1 && Math.abs(x2-x1)==1);
+    public void addingEatablePiece(int x1,int y1,ArrayList eatablePiece){
+        if(isBlack()){
+            setEatablePieceOrThreateningPiece(isPieceInBetween(x1,x1-2,y1,y1+2),x1,y1,eatablePiece);
+            setEatablePieceOrThreateningPiece(isPieceInBetween(x1,x1+2,y1,y1+2),x1,y1,eatablePiece);
+        }else{
+            setEatablePieceOrThreateningPiece(isPieceInBetween(x1,x1-2,y1,y1-2),x1,y1,eatablePiece);
+            setEatablePieceOrThreateningPiece(isPieceInBetween(x1,x1+2,y1,y1-2),x1,y1,eatablePiece);
+        }
     }
 }

@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Player here.
  * 
@@ -8,16 +8,17 @@
 public class Player
 {
    String name;
-   Side side;
-   
-    public Player(String name,Side side)
+   final Side side;
+   private ArrayList threateningPiece;
+    public Player(String name,String color)
    {
        this.name=name;
-       this.side=side;
+       side = new Side(color);
+       this.threateningPiece=new ArrayList();
    }
    public void setSide(Side side)
    {
-       this.side = side;
+//       this.side = side;
    }
    public void setName(String name)
    {
@@ -31,4 +32,13 @@ public class Player
    {
        return name;
    }
+   public ArrayList getThreateningPiece(){
+       return threateningPiece;
+   }
+   public void setThreateningPiece(Piece piece){
+       threateningPiece.add(piece);
+    }
+   public boolean isBelongToMe(Side side){
+       return this.side.getSide().equals(side.getSide());
+    }
 }

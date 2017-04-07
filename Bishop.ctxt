@@ -1,10 +1,12 @@
 #BlueJ class context
-comment0.params=side
-comment0.target=Bishop(Side)
+comment0.params=side\ coordinate\ threateningPiece
+comment0.target=Bishop(Side,\ Piece[][],\ java.util.ArrayList)
 comment1.params=
 comment1.target=java.lang.String\ toString()
 comment2.params=x1\ x2\ y1\ y2
 comment2.target=boolean\ isAllowed(int,\ int,\ int,\ int)
 comment3.params=x1\ x2\ y1\ y2
-comment3.target=boolean\ validateMovement(int,\ int,\ int,\ int)
-numComments=4
+comment3.target=boolean\ isSlantMovementValid(int,\ int,\ int,\ int)
+comment4.params=x1\ y1\ eatablePiece
+comment4.target=void\ addingEatablePiece(int,\ int,\ java.util.ArrayList)
+numComments=5

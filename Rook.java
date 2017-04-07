@@ -1,4 +1,5 @@
-
+import java.util.*;
+import Exceptions.*;
 /**
  * Write a description of class Rook here.
  * 
@@ -7,28 +8,38 @@
  */
 public class Rook extends Piece
 {
-    Rook(Side side){
-        super(side);
+    int intact;
+    Rook(Side side,Piece[][] coordinate,ArrayList threateningPiece){
+        super(side,coordinate,threateningPiece);
+        intact=0;
     }
     public String toString()
     {
-        if(isBlack())
-        {
-           return "[BRk]";
+        if(isBlack()){
+            return "[BRk]";
         }else if(isWhite()){
-           return "[WRk]";
+            return "[WRk]";
         }
         return null;
     }
-    public boolean isAllowed(int x1,int x2,int y1,int y2){
-        if(validateMovement(x1,x2,y1,y2)){
+    public boolean isAllowed(int x1,int x2,int y1,int y2) throws InvalidMoveException{
+        if(isHorizontalOrVerticalMovementValid(x1,x2,y1,y2)){
+            if(getCoordinate()[y1][x1].isPieceInBetween(x1,x2,y1,y2) == null){
+                setIntact(1);
+            }
             return true;
         }
-        return false;
+        else{
+            throw new InvalidMoveException();
+        }
     }
-    public boolean validateMovement(int x1,int x2,int y1,int y2)
-    {
-        return x1==x2&&y1==y2;
+    public void addingEatablePiece(int x1,int y1,ArrayList eatablePiece){
+        setEatablePieceOrThreateningPiece(isPieceInBetween(x1,x1,y1,-1),x1,y1,eatablePiece);
+        setEatablePieceOrThreateningPiece(isPieceInBetween(x1,-1,y1,y1),x1,y1,eatablePiece);
+        setEatablePieceOrThreateningPiece(isPieceInBetween(x1,x1,y1,8),x1,y1,eatablePiece);
+        setEatablePieceOrThreateningPiece(isPieceInBetween(x1,8,y1,y1),x1,y1,eatablePiece);
+    }
+    private boolean isHorizontalOrVerticalMovementValid(int x1,int x2,int y1,int y2){
+        return x1==x2||y1==y2;
     }
 }
-

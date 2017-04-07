@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 /**
  * Write a description of class Main here.
  * 
@@ -9,16 +8,6 @@ import java.util.ArrayList;
 //main
 public class Main
 {
-   /*
-     ChessBoard chessboard=new ChessBoard();
-     static int x1=0;
-     static int x2=0;
-     static int y1=0;
-     static int y2=0;
-     */
-     Main(){
-        chessboard = new ChessBoard();
-     }
      public static void main(){
          /*
          Scanner in = new Scanner(System.in);
@@ -92,8 +81,5 @@ public class Main
      }
      */
      ConsoleManager.console();
-
-    
-    
    }
 }
