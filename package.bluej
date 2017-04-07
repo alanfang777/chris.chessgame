@@ -2,37 +2,6 @@
 dependency1.from=ChessBoard
 dependency1.to=Visualize
 dependency1.type=UsesDependency
-<<<<<<< HEAD
-dependency10.from=Piece
-dependency10.to=Side
-dependency10.type=UsesDependency
-dependency11.from=Player
-dependency11.to=Side
-dependency11.type=UsesDependency
-dependency12.from=Coordinate2D
-dependency12.to=Side
-dependency12.type=UsesDependency
-dependency13.from=Coordinate2D
-dependency13.to=Piece
-dependency13.type=UsesDependency
-dependency14.from=Coordinate2D
-dependency14.to=Rook
-dependency14.type=UsesDependency
-dependency15.from=Coordinate2D
-dependency15.to=Knight
-dependency15.type=UsesDependency
-dependency16.from=Coordinate2D
-dependency16.to=Bishop
-dependency16.type=UsesDependency
-dependency17.from=Coordinate2D
-dependency17.to=King
-dependency17.type=UsesDependency
-dependency18.from=Coordinate2D
-dependency18.to=Queen
-dependency18.type=UsesDependency
-dependency19.from=ConsoleManager
-dependency19.to=ChessBoard
-=======
 dependency10.from=Main
 dependency10.to=ChessBoard
 dependency10.type=UsesDependency
@@ -62,27 +31,10 @@ dependency18.to=Rook
 dependency18.type=UsesDependency
 dependency19.from=Coordinate2D
 dependency19.to=Knight
->>>>>>> origin/master
 dependency19.type=UsesDependency
 dependency2.from=Knight
 dependency2.to=Side
 dependency2.type=UsesDependency
-<<<<<<< HEAD
-dependency20.from=Knight
-dependency20.to=Pawn
-dependency20.type=UsesDependency
-dependency21.from=ConsoleManager
-dependency21.to=Player
-dependency21.type=UsesDependency
-dependency22.from=Player
-dependency22.to=Piece
-dependency22.type=UsesDependency
-dependency23.from=Main
-dependency23.to=ChessBoard
-dependency23.type=UsesDependency
-dependency24.from=Main
-dependency24.to=ConsoleManager
-=======
 dependency20.from=Coordinate2D
 dependency20.to=Bishop
 dependency20.type=UsesDependency
@@ -97,8 +49,13 @@ dependency23.to=ChessBoard
 dependency23.type=UsesDependency
 dependency24.from=Main
 dependency24.to=PlayerInput
->>>>>>> origin/master
 dependency24.type=UsesDependency
+dependency25.from=ConsoleManager
+dependency25.to=Player
+dependency25.type=UsesDependency
+dependency26.from=ConsoleManager
+dependency26.to=Side
+dependency26.type=UsesDependency
 dependency3.from=King
 dependency3.to=Side
 dependency3.type=UsesDependency
@@ -121,23 +78,13 @@ dependency9.from=ChessBoard
 dependency9.to=Coordinate2D
 dependency9.type=UsesDependency
 objectbench.height=76
-<<<<<<< HEAD
-objectbench.width=1040
-package.editor.height=581
-package.editor.width=932
-package.editor.x=420
-package.editor.y=164
-package.numDependencies=24
-package.numTargets=15
-=======
 objectbench.width=885
 package.editor.height=581
 package.editor.width=777
 package.editor.x=533
 package.editor.y=23
-package.numDependencies=24
+package.numDependencies=26
 package.numTargets=16
->>>>>>> origin/master
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -154,15 +101,6 @@ target1.typeParameters=
 target1.width=80
 target1.x=190
 target1.y=190
-<<<<<<< HEAD
-target10.editor.height=817
-target10.editor.width=800
-target10.editor.x=1
-target10.editor.y=23
-target10.height=50
-target10.name=Piece
-target10.naviview.expanded=true
-=======
 target10.editor.height=813
 target10.editor.width=893
 target10.editor.x=481
@@ -170,22 +108,9 @@ target10.editor.y=23
 target10.height=50
 target10.name=Coordinate2D
 target10.naviview.expanded=false
->>>>>>> origin/master
 target10.showInterface=false
-target10.type=AbstractTarget
+target10.type=ClassTarget
 target10.typeParameters=
-<<<<<<< HEAD
-target10.width=80
-target10.x=100
-target10.y=430
-target11.editor.height=703
-target11.editor.width=1120
-target11.editor.x=4
-target11.editor.y=23
-target11.height=50
-target11.name=Knight
-target11.naviview.expanded=false
-=======
 target10.width=110
 target10.x=410
 target10.y=320
@@ -196,54 +121,10 @@ target11.editor.y=23
 target11.height=50
 target11.name=Piece
 target11.naviview.expanded=true
->>>>>>> origin/master
 target11.showInterface=false
 target11.type=AbstractTarget
 target11.typeParameters=
 target11.width=80
-<<<<<<< HEAD
-target11.x=10
-target11.y=130
-target12.height=62
-target12.name=Exceptions
-target12.type=PackageTarget
-target12.width=90
-target12.x=290
-target12.y=380
-target13.editor.height=817
-target13.editor.width=959
-target13.editor.x=421
-target13.editor.y=23
-target13.height=50
-target13.name=ChessBoard
-target13.naviview.expanded=false
-target13.showInterface=false
-target13.type=ClassTarget
-target13.typeParameters=
-target13.width=100
-target13.x=480
-target13.y=360
-target14.editor.height=700
-target14.editor.width=900
-target14.editor.x=420
-target14.editor.y=42
-target14.height=50
-target14.name=Main
-target14.naviview.expanded=true
-target14.showInterface=false
-target14.type=ClassTarget
-target14.typeParameters=
-target14.width=80
-target14.x=530
-target14.y=120
-target15.editor.height=818
-target15.editor.width=796
-target15.editor.x=383
-target15.editor.y=22
-target15.height=50
-target15.name=Rook
-target15.naviview.expanded=false
-=======
 target11.x=100
 target11.y=330
 target12.editor.height=703
@@ -285,15 +166,10 @@ target15.editor.y=45
 target15.height=50
 target15.name=Main
 target15.naviview.expanded=true
->>>>>>> origin/master
 target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
 target15.width=80
-<<<<<<< HEAD
-target15.x=10
-target15.y=190
-=======
 target15.x=590
 target15.y=460
 target16.editor.height=820
@@ -309,7 +185,6 @@ target16.typeParameters=
 target16.width=80
 target16.x=10
 target16.y=190
->>>>>>> origin/master
 target2.editor.height=802
 target2.editor.width=675
 target2.editor.x=5
@@ -325,8 +200,8 @@ target2.x=380
 target2.y=460
 target3.editor.height=700
 target3.editor.width=900
-target3.editor.x=2
-target3.editor.y=23
+target3.editor.x=518
+target3.editor.y=22
 target3.height=50
 target3.name=Player
 target3.naviview.expanded=true
@@ -349,17 +224,10 @@ target4.typeParameters=
 target4.width=80
 target4.x=190
 target4.y=130
-<<<<<<< HEAD
-target5.editor.height=817
-target5.editor.width=730
-target5.editor.x=634
-target5.editor.y=22
-=======
 target5.editor.height=820
 target5.editor.width=730
-target5.editor.x=4
-target5.editor.y=23
->>>>>>> origin/master
+target5.editor.x=517
+target5.editor.y=22
 target5.height=50
 target5.name=ConsoleManager
 target5.naviview.expanded=true
@@ -367,21 +235,12 @@ target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
 target5.width=130
-<<<<<<< HEAD
-target5.x=760
-target5.y=220
-target6.editor.height=816
-target6.editor.width=637
-target6.editor.x=376
-target6.editor.y=22
-=======
 target5.x=680
 target5.y=280
 target6.editor.height=700
 target6.editor.width=707
 target6.editor.x=70
 target6.editor.y=50
->>>>>>> origin/master
 target6.height=50
 target6.name=Pawn
 target6.naviview.expanded=false
@@ -391,27 +250,6 @@ target6.typeParameters=
 target6.width=80
 target6.x=100
 target6.y=190
-<<<<<<< HEAD
-target7.editor.height=813
-target7.editor.width=516
-target7.editor.x=602
-target7.editor.y=23
-target7.height=50
-target7.name=Side
-target7.naviview.expanded=false
-target7.showInterface=false
-target7.type=ClassTarget
-target7.typeParameters=
-target7.width=80
-target7.x=70
-target7.y=10
-target8.editor.height=813
-target8.editor.width=782
-target8.editor.x=658
-target8.editor.y=23
-target8.height=50
-target8.name=King
-=======
 target7.editor.height=700
 target7.editor.width=900
 target7.editor.x=173
@@ -431,29 +269,11 @@ target8.editor.x=602
 target8.editor.y=22
 target8.height=50
 target8.name=Side
->>>>>>> origin/master
 target8.naviview.expanded=false
 target8.showInterface=false
 target8.type=ClassTarget
 target8.typeParameters=
 target8.width=80
-<<<<<<< HEAD
-target8.x=100
-target8.y=130
-target9.editor.height=813
-target9.editor.width=839
-target9.editor.x=493
-target9.editor.y=22
-target9.height=50
-target9.name=Coordinate2D
-target9.naviview.expanded=true
-target9.showInterface=false
-target9.type=ClassTarget
-target9.typeParameters=
-target9.width=110
-target9.x=360
-target9.y=290
-=======
 target8.x=70
 target8.y=10
 target9.editor.height=813
@@ -469,4 +289,3 @@ target9.typeParameters=
 target9.width=80
 target9.x=100
 target9.y=130
->>>>>>> origin/master

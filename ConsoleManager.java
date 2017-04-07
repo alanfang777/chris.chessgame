@@ -11,13 +11,10 @@ public class ConsoleManager
 {
     public static void console()
     {
-<<<<<<< HEAD
         Player player1 = new Player(null,"white");
         Player player2 = new Player(null,"black");
         ChessBoard chessBoard=new ChessBoard(player1.getThreateningPiece(),player2.getThreateningPiece());
-=======
         ChessBoard chessBoard=new ChessBoard();
->>>>>>> origin/master
         Scanner in=new Scanner(System.in);
         String name1;
         String name2;
@@ -47,9 +44,9 @@ public class ConsoleManager
                 sequence--;
             }     
             System.out.println("Please enter your origin and destination");
-            System.out.println("The right command is goto/quit");
+            System.out.println("The right command is goto/exit");
             String command=in.nextLine();
-            if(command.equals("quit"))
+            if(command.equals("exit"))
             {
                 keepGaming=false;
             }
