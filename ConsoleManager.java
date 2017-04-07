@@ -11,9 +11,13 @@ public class ConsoleManager
 {
     public static void console()
     {
+<<<<<<< HEAD
         Player player1 = new Player(null,"white");
         Player player2 = new Player(null,"black");
         ChessBoard chessBoard=new ChessBoard(player1.getThreateningPiece(),player2.getThreateningPiece());
+=======
+        ChessBoard chessBoard=new ChessBoard();
+>>>>>>> origin/master
         Scanner in=new Scanner(System.in);
         String name1;
         String name2;

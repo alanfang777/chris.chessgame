@@ -1,4 +1,9 @@
 #BlueJ class context
+<<<<<<< HEAD
 comment0.params=
 comment0.target=void\ main()
+=======
+comment0.params=orgs
+comment0.target=void\ main(java.lang.String[])
+>>>>>>> origin/master
 numComments=1

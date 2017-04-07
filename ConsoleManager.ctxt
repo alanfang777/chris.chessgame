@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ console()
+comment1.params=
+comment1.target=void\ gameConsoleStarter()
+comment2.params=coordinate
+comment2.target=int\ convertToAscii(char)
+comment3.params=coordinate\ axis
+comment3.target=boolean\ isCoordinateInRange(char,\ java.lang.String)
+numComments=4

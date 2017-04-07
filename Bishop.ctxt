@@ -1,6 +1,11 @@
 #BlueJ class context
+<<<<<<< HEAD
 comment0.params=side\ coordinate\ threateningPiece
 comment0.target=Bishop(Side,\ Piece[][],\ java.util.ArrayList)
+=======
+comment0.params=side\ coordinate
+comment0.target=Bishop(Side,\ Piece[][])
+>>>>>>> origin/master
 comment1.params=
 comment1.target=java.lang.String\ toString()
 comment2.params=x1\ x2\ y1\ y2

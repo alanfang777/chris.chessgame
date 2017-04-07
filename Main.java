@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.ArrayList;
 /**
  * Write a description of class Main here.
@@ -5,15 +6,23 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-//main
 public class Main
 {
+<<<<<<< HEAD
      public static void main(){
          /*
+=======
+     public static void main(String[] orgs){
+         int x1=0;
+         int x2=0;
+         int y1=0;
+         int y2=0;
+>>>>>>> origin/master
          Scanner in = new Scanner(System.in);
          boolean works = true;
-          System.out.println("Welcome to alan.chessgame v1.0.0");
+        System.out.println("Welcome to alan.chessgame v1.0.0");
            ChessBoard chessboard=new ChessBoard();
+           PlayerInput palyerinput= new PlayerInput();
              System.out.println("Please enter the first player's name");
              String name1= in.nextLine();
              System.out.println("Please enter the second player's name");
@@ -40,15 +49,14 @@ public class Main
                  {
                     x1=input.charAt(5)-65;
                  }
-                 if(input.charAt(6)>=48 && input.charAt(6)<=55)
+                 if(input.charAt(6)>=49 && input.charAt(6)<=56)
                  {
                      y1=input.charAt(6)-49;
                  }
-                 if(input.charAt(8)>=65 && input.charAt(8)<=72)
                  {
                      x2=input.charAt(8)-65;
                  }
-                 if(input.charAt(9)>=48 && input.charAt(9)<=55)
+                 if(input.charAt(9)>=49 && input.charAt(9)<=56)
                  {
                      y2=input.charAt(9)-49;
                  }
@@ -57,25 +65,10 @@ public class Main
              {
                  works=false;
              }
-             if(sequence==1 && chessboard.coordinate2D.getCoordinate(x1,y1).getChess().getSide().equals("white")){
-             chessboard.PrintCoordinate(convertion(x1,y1),convertion(x2,y2));
-            }
-            else if(sequence==0 && chessboard.coordinate2D.getCoordinate(x1,y1).getChess().getSide().equals("black")){
-             chessboard.PrintCoordinate(convertion(x1,y1),convertion(x2,y2));
-            }
-            else{
-                System.out.println("This is not the piece of your side");
-                if(sequence==1)
-                {
-                    sequence=0;
-                }
-                else if(sequence==0)
-                {
-                    sequence=1;
-                }
-            }
+             chessboard.printCoordinate(x1,x2,y1,y2);
         }
       }
+<<<<<<< HEAD
          public static int convertion(int x, int y ) {
          return x+y*8;
      }
@@ -83,3 +76,6 @@ public class Main
      ConsoleManager.console();
    }
 }
+=======
+}
+>>>>>>> origin/master

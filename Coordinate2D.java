@@ -14,6 +14,7 @@ public class Coordinate2D
         Side white = new Side("white");
         Side black = new Side("black");
         piece = new Piece[8][8];
+<<<<<<< HEAD
         int y=0;
         while(y<8){
             if(y==0){
@@ -56,11 +57,17 @@ public class Coordinate2D
             }
         }
         }
+=======
+        piece[7][0]= new Rook(white,piece);
+        piece[0][0]= new Rook(black,piece);
+        }
+>>>>>>> origin/master
     public Piece[][] getPieceArray(){
         return piece;
     }
     public boolean movePiece(int x1,int x2,int y1,int y2)
     {
+<<<<<<< HEAD
         try{
             piece[y1][x1].isAllowed(x1,x2,y1,y2);
         }
@@ -79,6 +86,19 @@ public class Coordinate2D
                          piece[y1][x1] = piece[y2][x2];
                          piece[y2][x2] = null;
                          return false;
+=======
+        if(piece[y1][x1].isAllowed(x1,x2,y1,y2) && piece[y1][x1].isPieceInBetween(x1,x2,y1,y2) == null){
+            if(piece[y2][x2]==null){
+                piece[y2][x2] = piece[y1][x1];
+                piece[y1][x1] = null;
+                piece[y2][x2].getEatablePiece(x1,y1);
+                return true;
+            }else{
+                piece[y2][x2] = piece[y1][x1];
+                 piece[y1][x1] = null;
+                 piece[y2][x2].getEatablePiece(x1,y1);
+                 return true;
+>>>>>>> origin/master
             }
         }
        return true;

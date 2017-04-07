@@ -10,6 +10,7 @@ public class ChessBoard
 {
     private Visualize visualize;
     private Coordinate2D coordinate2D;
+<<<<<<< HEAD
     ChessBoard(ArrayList threateningPiece1,ArrayList threateningPiece2){
         visualize=new Visualize();
         coordinate2D = new Coordinate2D(threateningPiece1,threateningPiece2);
@@ -27,5 +28,19 @@ public class ChessBoard
             System.out.println("You have pick the wrong turn");
         }
         return false;
+=======
+    ChessBoard(){
+        visualize=new Visualize();
+        coordinate2D = new Coordinate2D();
+        visualize.print(coordinate2D.getPieceArray());
+    }
+    public void printCoordinate(int x1,int x2,int y1,int y2){
+        if(coordinate2D.getPieceArray()[y1][x1]!=null){
+            coordinate2D.movePiece(x1,x2,y1,y2);
+            visualize.print(coordinate2D.getPieceArray());
+        }else{
+            System.out.println("we have no piece on this cooridnate!!!");
+        }
+>>>>>>> origin/master
     }
 }

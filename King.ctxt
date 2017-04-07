@@ -1,6 +1,11 @@
 #BlueJ class context
+<<<<<<< HEAD
 comment0.params=side\ coordinate\ threateningPiece
 comment0.target=King(Side,\ Piece[][],\ java.util.ArrayList)
+=======
+comment0.params=side\ coordinate
+comment0.target=King(Side,\ Piece[][])
+>>>>>>> origin/master
 comment1.params=
 comment1.target=java.lang.String\ toString()
 comment2.params=x1\ x2\ y1\ y2
@@ -13,6 +18,10 @@ comment5.params=y1\ y2
 comment5.target=boolean\ isVerticalMovementValid(int,\ int)
 comment6.params=x1\ x2\ y1\ y2
 comment6.target=boolean\ isSlantMovementValid(int,\ int,\ int,\ int)
+<<<<<<< HEAD
 comment7.params=x1\ x2\ y1\ y2\ side
 comment7.target=boolean\ isCastling(int,\ int,\ int,\ int,\ Side)
 numComments=8
+=======
+numComments=7
+>>>>>>> origin/master

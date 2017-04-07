@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=name\ side
+comment0.target=Player(java.lang.String,\ Side)
+comment1.params=side
+comment1.target=void\ setSide(Side)
+comment2.params=name
+comment2.target=void\ setName(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getSide()
+comment4.params=
+comment4.target=java.lang.String\ getName()
+numComments=5

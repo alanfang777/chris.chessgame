@@ -3,8 +3,13 @@ objectbench.height=76
 objectbench.width=668
 package.editor.height=400
 package.editor.width=560
+<<<<<<< HEAD
 package.editor.x=400
 package.editor.y=42
+=======
+package.editor.x=46
+package.editor.y=63
+>>>>>>> origin/master
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true

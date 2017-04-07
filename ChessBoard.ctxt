@@ -1,6 +1,13 @@
 #BlueJ class context
+<<<<<<< HEAD
 comment0.params=threateningPiece1\ threateningPiece2
 comment0.target=ChessBoard(java.util.ArrayList,\ java.util.ArrayList)
 comment1.params=x1\ x2\ y1\ y2\ sequence
 comment1.target=boolean\ printCoordinate(int,\ int,\ int,\ int,\ int)
+=======
+comment0.params=
+comment0.target=ChessBoard()
+comment1.params=x1\ x2\ y1\ y2
+comment1.target=void\ printCoordinate(int,\ int,\ int,\ int)
+>>>>>>> origin/master
 numComments=2
