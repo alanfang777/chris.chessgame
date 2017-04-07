@@ -26,4 +26,8 @@ En passant Done
 Goto command works in the format goto Done 
 Exit command works to end game Done
 
-
+No Issue:
+Method division
+Rename some methods to increase reablility
+Full exception replacement
+Pawn's role transformation in the edge of the chessboard
